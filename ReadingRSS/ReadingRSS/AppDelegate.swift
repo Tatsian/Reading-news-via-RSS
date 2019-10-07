@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  ReadingRSS
-//
-//  Created by Tatsiana on 04/10/2019.
-//  Copyright © 2019 Tati. All rights reserved.
-//
 
 import UIKit
 import CoreData
