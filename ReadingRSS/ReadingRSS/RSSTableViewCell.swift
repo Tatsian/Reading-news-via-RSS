@@ -7,7 +7,7 @@ class RSSTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    func setUpCell(itemData: ItemData) {
+    func setUpCell(itemData: Item) {
         titleLabel.text = itemData.title
         descriptionLabel.text = itemData.description
  //       loadImage(url: itemData.???)

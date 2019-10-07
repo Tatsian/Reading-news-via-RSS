@@ -6,7 +6,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var newsTable: UITableView!
     
     let urlString = "http://www.vesti.ru/vesti.rss"
-    var articlesArray: [ItemData] = []
+    var articlesArray: [Item] = []
     
     override func viewDidAppear(_ animated: Bool) {
 
