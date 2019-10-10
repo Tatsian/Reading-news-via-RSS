@@ -18,7 +18,6 @@ struct Rss: Codable {
     }
 }
 
-
 struct Channel: Codable {
     let title: String
     let about: URL
