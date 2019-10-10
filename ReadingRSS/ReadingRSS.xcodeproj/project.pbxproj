@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5B45BE792349586E008AAFDA /* Strucs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B45BE782349586E008AAFDA /* Strucs.swift */; };
-		5B45BE7F234AF0D0008AAFDA /* RSSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B45BE7E234AF0D0008AAFDA /* RSSTableViewCell.swift */; };
 		5B6DC24523477B7C0036DB17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6DC24423477B7C0036DB17 /* AppDelegate.swift */; };
 		5B6DC24A23477B7C0036DB17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6DC24823477B7C0036DB17 /* Main.storyboard */; };
 		5B6DC24D23477B7C0036DB17 /* ReadingRSS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B6DC24B23477B7C0036DB17 /* ReadingRSS.xcdatamodeld */; };
@@ -23,7 +22,6 @@
 /* Begin PBXFileReference section */
 		44D346F5C3610FED922D28AA /* Pods-ReadingRSS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReadingRSS.debug.xcconfig"; path = "Target Support Files/Pods-ReadingRSS/Pods-ReadingRSS.debug.xcconfig"; sourceTree = "<group>"; };
 		5B45BE782349586E008AAFDA /* Strucs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strucs.swift; sourceTree = "<group>"; };
-		5B45BE7E234AF0D0008AAFDA /* RSSTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSTableViewCell.swift; sourceTree = "<group>"; };
 		5B6DC24123477B7C0036DB17 /* ReadingRSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadingRSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6DC24423477B7C0036DB17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B6DC24923477B7C0036DB17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,7 +80,6 @@
 			children = (
 				5BEBAC9E234F331A004F5B90 /* Models */,
 				5B6DC24423477B7C0036DB17 /* AppDelegate.swift */,
-				5B45BE7E234AF0D0008AAFDA /* RSSTableViewCell.swift */,
 				5BEBACA1234F4526004F5B90 /* OneNewsViewController.swift */,
 				5BEBAC9A234F30B0004F5B90 /* TableViewController.swift */,
 				5B6DC24823477B7C0036DB17 /* Main.storyboard */,
@@ -226,7 +223,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B45BE7F234AF0D0008AAFDA /* RSSTableViewCell.swift in Sources */,
 				5BEBAC9B234F30B0004F5B90 /* TableViewController.swift in Sources */,
 				5B45BE792349586E008AAFDA /* Strucs.swift in Sources */,
 				5B6DC24D23477B7C0036DB17 /* ReadingRSS.xcdatamodeld in Sources */,

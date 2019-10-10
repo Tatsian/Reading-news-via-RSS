@@ -33,7 +33,9 @@ class TableViewController: UITableViewController {
         let article = articlesArray[indexPath.row]
         
         cell.textLabel?.text = article.title
-   //     cell.detailTextLabel?.text = article.pubDate
+      
+        guard var myDate = article.pubDate else { return cell}
+       cell.detailTextLabel?.text = myDate.asString(style: .medium)
 
         return cell
     }
@@ -92,4 +94,12 @@ class TableViewController: UITableViewController {
 
 
 
+}
+
+extension Date {
+  func asString(style: DateFormatter.Style) -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateStyle = style
+    return dateFormatter.string(from: self)
+  }
 }
