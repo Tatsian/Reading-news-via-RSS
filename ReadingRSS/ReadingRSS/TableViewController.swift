@@ -14,6 +14,17 @@ class TableViewController: UITableViewController {
 
     }
 
+    
+    @IBAction func refreshControlAction(_ sender: Any) {
+        
+        parseRSS{
+            DispatchQueue.main.async {
+                self.refreshControl?.endRefreshing()
+                self.tableView.reloadData()
+                print("refresh")
+            }
+        }
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -35,7 +46,7 @@ class TableViewController: UITableViewController {
         cell.textLabel?.text = article.title
       
         guard var myDate = article.pubDate else { return cell}
-       cell.detailTextLabel?.text = myDate.asString(style: .medium)
+        cell.detailTextLabel?.text = myDate.asString(style: .medium)
 
         return cell
     }
