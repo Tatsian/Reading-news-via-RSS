@@ -16,6 +16,7 @@
 		5BEBAC9B234F30B0004F5B90 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAC9A234F30B0004F5B90 /* TableViewController.swift */; };
 		5BEBAC9D234F31C9004F5B90 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAC9C234F31C9004F5B90 /* Model.swift */; };
 		5BEBACA2234F4526004F5B90 /* OneNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACA1234F4526004F5B90 /* OneNewsViewController.swift */; };
+		5BEBACA8235257D4004F5B90 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACA7235257D4004F5B90 /* FilterViewController.swift */; };
 		8E37D032A384D144976FACCA /* Pods_ReadingRSS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDD91A04B7B892CDC97A46D /* Pods_ReadingRSS.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		5BEBAC9A234F30B0004F5B90 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		5BEBAC9C234F31C9004F5B90 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		5BEBACA1234F4526004F5B90 /* OneNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneNewsViewController.swift; sourceTree = "<group>"; };
+		5BEBACA7235257D4004F5B90 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		5EDD91A04B7B892CDC97A46D /* Pods_ReadingRSS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReadingRSS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A52A2DECA7443D25BD5240F6 /* Pods-ReadingRSS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReadingRSS.release.xcconfig"; path = "Target Support Files/Pods-ReadingRSS/Pods-ReadingRSS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +83,7 @@
 				5BEBAC9E234F331A004F5B90 /* Models */,
 				5B6DC24423477B7C0036DB17 /* AppDelegate.swift */,
 				5BEBACA1234F4526004F5B90 /* OneNewsViewController.swift */,
+				5BEBACA7235257D4004F5B90 /* FilterViewController.swift */,
 				5BEBAC9A234F30B0004F5B90 /* TableViewController.swift */,
 				5B6DC24823477B7C0036DB17 /* Main.storyboard */,
 				5B6DC24E23477B7E0036DB17 /* Assets.xcassets */,
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BEBACA8235257D4004F5B90 /* FilterViewController.swift in Sources */,
 				5BEBAC9B234F30B0004F5B90 /* TableViewController.swift in Sources */,
 				5B45BE792349586E008AAFDA /* Strucs.swift in Sources */,
 				5B6DC24D23477B7C0036DB17 /* ReadingRSS.xcdatamodeld in Sources */,

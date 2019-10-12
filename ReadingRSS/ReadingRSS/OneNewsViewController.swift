@@ -14,18 +14,10 @@ class OneNewsViewController: UIViewController {
         guard let articleOpened = article else { return}
         titleOneNews.text = articleOpened.title
         descriptionOneNews.text = articleOpened.description
-    
+        
+        let url = URL(string: (articleOpened.enclosure?.attributes!.url)!)
+        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+        imageOneNews.image = UIImage(data: data!)
+  
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

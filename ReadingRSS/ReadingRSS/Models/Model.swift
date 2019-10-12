@@ -12,6 +12,7 @@ import FeedKit
 
 let urlString = "http://www.vesti.ru/vesti.rss"
 var articlesArray: [RSSFeedItem] = []
+var categoryArray = [String]()
 
 
 func parseRSS(completionHandler: (()-> Void)?) {
@@ -23,11 +24,10 @@ func parseRSS(completionHandler: (()-> Void)?) {
         articlesArray = itemsArray
         print("News count:", items?.count)
         print("Error", result.error)
-        
+
         completionHandler?()
 
     }
-    
     
     func dateToDateFormat(dateString: String) {
         let dateString = "Thu, 22 Oct 2015 07:45:17 +0000"

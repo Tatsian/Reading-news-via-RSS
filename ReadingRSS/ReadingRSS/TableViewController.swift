@@ -5,16 +5,14 @@ class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         parseRSS{
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
-            
         }
-
     }
 
-    
     @IBAction func refreshControlAction(_ sender: Any) {
         
         parseRSS{
@@ -45,7 +43,7 @@ class TableViewController: UITableViewController {
         
         cell.textLabel?.text = article.title
       
-        guard var myDate = article.pubDate else { return cell}
+        guard let myDate = article.pubDate else { return cell}
         cell.detailTextLabel?.text = myDate.asString(style: .medium)
 
         return cell

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fmz-9P-R7g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E3y-v8-x9B">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -13,7 +13,7 @@
             <objects>
                 <tableViewController id="Vvw-V3-aV5" customClass="TableViewController" customModule="ReadingRSS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aGe-mJ-DRX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="591"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -61,18 +61,58 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zOi-nk-wov" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3026" y="600"/>
+            <point key="canvasLocation" x="-2590" y="600"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="YUU-u4-gF6">
+            <objects>
+                <viewController id="egU-3m-Djp" customClass="FilterViewController" customModule="ReadingRSS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t6s-pG-mhc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FIC-3q-cON">
+                                <rect key="frame" x="0.0" y="44" width="375" height="591"/>
+                                <connections>
+                                    <segue destination="Vvw-V3-aV5" kind="embed" id="61R-4P-pYQ"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YW6-x8-32O">
+                                <rect key="frame" x="2" y="635" width="371" height="30"/>
+                                <state key="normal" title="Choose category"/>
+                                <connections>
+                                    <action selector="chooseFilterClikced:" destination="egU-3m-Djp" eventType="touchUpInside" id="gh3-NE-LJA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FIC-3q-cON" firstAttribute="leading" secondItem="ONh-rl-UtX" secondAttribute="leading" id="1bA-Vi-bKt"/>
+                            <constraint firstItem="ONh-rl-UtX" firstAttribute="bottom" secondItem="YW6-x8-32O" secondAttribute="bottom" constant="2" id="AGs-qE-R3p"/>
+                            <constraint firstItem="ONh-rl-UtX" firstAttribute="trailing" secondItem="FIC-3q-cON" secondAttribute="trailing" id="QjN-Le-Apx"/>
+                            <constraint firstItem="ONh-rl-UtX" firstAttribute="trailing" secondItem="YW6-x8-32O" secondAttribute="trailing" constant="2" id="S8R-tG-M9a"/>
+                            <constraint firstItem="YW6-x8-32O" firstAttribute="leading" secondItem="ONh-rl-UtX" secondAttribute="leading" constant="2" id="hbV-e7-1ou"/>
+                            <constraint firstItem="YW6-x8-32O" firstAttribute="top" secondItem="FIC-3q-cON" secondAttribute="bottom" id="jrf-Ls-rgH"/>
+                            <constraint firstItem="FIC-3q-cON" firstAttribute="top" secondItem="ONh-rl-UtX" secondAttribute="top" id="u95-QH-7yi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ONh-rl-UtX"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="News" id="U9v-yE-HV9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kkf-hE-Ovd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3258" y="600"/>
         </scene>
         <!--One News View Controller-->
         <scene sceneID="ffo-QK-gf1">
             <objects>
                 <viewController id="Qb9-hI-y5V" customClass="OneNewsViewController" customModule="ReadingRSS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uVh-q4-Ho7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="571"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tkH-mk-ohe">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="571"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Li8-He-YJv">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="421"/>
@@ -124,25 +164,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tWf-an-lPT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2285.5999999999999" y="603.14842578710648"/>
+            <point key="canvasLocation" x="-1810" y="600"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="X9h-og-lC2">
+        <scene sceneID="2hD-Kw-bd8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fmz-9P-R7g" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E3y-v8-x9B" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rUn-NP-TIy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wgg-tO-sSs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Vvw-V3-aV5" kind="relationship" relationship="rootViewController" id="6dA-Ce-Rgo"/>
+                        <segue destination="egU-3m-Djp" kind="relationship" relationship="rootViewController" id="zYh-uF-YFF"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dNc-Q3-R5b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B1u-A8-DeU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3797" y="600"/>
+            <point key="canvasLocation" x="-4010" y="1123"/>
         </scene>
     </scenes>
 </document>
