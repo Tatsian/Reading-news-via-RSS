@@ -14,7 +14,6 @@
 		5B6DC24F23477B7E0036DB17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B6DC24E23477B7E0036DB17 /* Assets.xcassets */; };
 		5B6DC25223477B7E0036DB17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6DC25023477B7E0036DB17 /* LaunchScreen.storyboard */; };
 		5BEBAC9B234F30B0004F5B90 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAC9A234F30B0004F5B90 /* TableViewController.swift */; };
-		5BEBAC9D234F31C9004F5B90 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAC9C234F31C9004F5B90 /* Model.swift */; };
 		5BEBACA2234F4526004F5B90 /* OneNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACA1234F4526004F5B90 /* OneNewsViewController.swift */; };
 		5BEBACA8235257D4004F5B90 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACA7235257D4004F5B90 /* FilterViewController.swift */; };
 		8E37D032A384D144976FACCA /* Pods_ReadingRSS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDD91A04B7B892CDC97A46D /* Pods_ReadingRSS.framework */; };
@@ -31,7 +30,6 @@
 		5B6DC25123477B7E0036DB17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B6DC25323477B7E0036DB17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BEBAC9A234F30B0004F5B90 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		5BEBAC9C234F31C9004F5B90 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		5BEBACA1234F4526004F5B90 /* OneNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneNewsViewController.swift; sourceTree = "<group>"; };
 		5BEBACA7235257D4004F5B90 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		5EDD91A04B7B892CDC97A46D /* Pods_ReadingRSS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReadingRSS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,7 +95,6 @@
 		5BEBAC9E234F331A004F5B90 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5BEBAC9C234F31C9004F5B90 /* Model.swift */,
 				5B45BE782349586E008AAFDA /* Strucs.swift */,
 			);
 			path = Models;
@@ -231,7 +228,6 @@
 				5B45BE792349586E008AAFDA /* Strucs.swift in Sources */,
 				5B6DC24D23477B7C0036DB17 /* ReadingRSS.xcdatamodeld in Sources */,
 				5B6DC24523477B7C0036DB17 /* AppDelegate.swift in Sources */,
-				5BEBAC9D234F31C9004F5B90 /* Model.swift in Sources */,
 				5BEBACA2234F4526004F5B90 /* OneNewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

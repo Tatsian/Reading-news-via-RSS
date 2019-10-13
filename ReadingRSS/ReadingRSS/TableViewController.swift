@@ -1,8 +1,13 @@
 
 import UIKit
+import FeedKit
 
 class TableViewController: UITableViewController {
 
+    let urlString = "http://www.vesti.ru/vesti.rss"
+    var articlesArray: [RSSFeedItem] = []
+    var categoryArray = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,6 +27,20 @@ class TableViewController: UITableViewController {
                 print("refresh")
             }
         }
+    }
+    
+    func parseRSS(completionHandler: (()-> Void)?) {
+    let url = URL(string: urlString)!
+    let parser = FeedParser(URL: url)
+    parser.parseAsync(queue: DispatchQueue.global()) { (result) in
+        let items = result.rssFeed?.items
+        guard let itemsArray = items else { return }
+        self.articlesArray = itemsArray
+        print("News count:", items?.count)
+        print("Error", result.error)
+
+        completionHandler?()
+    }
     }
     // MARK: - Table view data source
 

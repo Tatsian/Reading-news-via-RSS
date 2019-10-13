@@ -15,9 +15,14 @@ class OneNewsViewController: UIViewController {
         titleOneNews.text = articleOpened.title
         descriptionOneNews.text = articleOpened.description
         
-        let url = URL(string: (articleOpened.enclosure?.attributes!.url)!)
-        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
-        imageOneNews.image = UIImage(data: data!)
+//        let url = URL(string: (articleOpened.enclosure?.attributes!.url)!)
+//        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+//        imageOneNews.image = UIImage(data: data!)
+        
+        guard let imageURL = articleOpened.enclosure?.attributes!.url else { return}
+        guard  let url = URL(string: imageURL) else {return}
+        guard let data = try? Data(contentsOf: url) else {return} //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+        imageOneNews.image = UIImage(data: data)
   
     }
 }
