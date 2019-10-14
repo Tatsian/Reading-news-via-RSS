@@ -1,5 +1,5 @@
 //
-//  JSONFeedParser.swift
+//  FeedParserProtocol.swift
 //
 //  Copyright (c) 2016 - 2018 Nuno Manuel Dias
 //
@@ -24,28 +24,8 @@
 
 import Foundation
 
-/// The actual engine behind the `FeedKit` framework. `JSONFeedParser` handles
-/// the parsing of JSON Feeds.
-///
-/// See: https://jsonfeed.org/version/1
-class JSONFeedParser: FeedParserProtocol {
-    
-    let data: Data
-    
-    required public init(data: Data) {
-        self.data = data
-    }
-    
-    func parse() -> Result {
-        do {
-            let decoder = JSONDecoder()
-            decoder.dateDecodingStrategy = Date.decodingStrategy
-            let decoded = try decoder.decode(JSONFeed.self, from: data)
-            return Result.json(decoded)
-        } catch {
-            return Result.failure(NSError(domain: error.localizedDescription, code: -1))
-        }
-        
-    }
-    
+/// The protocol for Parsing handlers.
+protocol FeedParserProtocol {
+    init(data: Data)
+    func parse() -> Result<Feed, ParserError>
 }

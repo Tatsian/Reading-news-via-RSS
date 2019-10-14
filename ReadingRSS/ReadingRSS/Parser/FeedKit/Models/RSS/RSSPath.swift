@@ -73,6 +73,8 @@ enum RSSPath: String {
     case rssChannelItemGUID                                     = "/rss/channel/item/guid"
     case rssChannelItemPubDate                                  = "/rss/channel/item/pubDate"
     case rssChannelItemSource                                   = "/rss/channel/item/source"
+    case rssChannelItemYandexFullText                           = "/rss/channel/item/yandex:full-text"
+
     
     // Content
     
@@ -157,6 +159,8 @@ enum RSSPath: String {
     case rssChannelItemMediaContentDescription                  = "/rss/channel/item/media:content/media:description"
     case rssChannelItemMediaContentPlayer                       = "/rss/channel/item/media:content/media:player"
     case rssChannelItemMediaContentThumbnail                    = "/rss/channel/item/media:content/media:thumbnail"
+    case rssChannelItemMediaContentKeywords                     = "/rss/channel/item/media:content/media:keywords"
+    case rssChannelItemMediaContentCategory                     = "/rss/channel/item/media:content/media:category"
     case rssChannelItemMediaCommunity                           = "/rss/channel/item/media:community"
     case rssChannelItemMediaCommunityMediaStarRating            = "/rss/channel/item/media:community/media:starRating"
     case rssChannelItemMediaCommunityMediaStatistics            = "/rss/channel/item/media:community/media:statistics"

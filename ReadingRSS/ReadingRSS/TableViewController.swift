@@ -1,12 +1,12 @@
 
 import UIKit
-import FeedKit
+
 
 class TableViewController: UITableViewController {
 
     let urlString = "http://www.vesti.ru/vesti.rss"
     var articlesArray: [RSSFeedItem] = []
-    var categoryArray = [String]()
+    var categoryArray: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,24 +33,30 @@ class TableViewController: UITableViewController {
     let url = URL(string: urlString)!
     let parser = FeedParser(URL: url)
     parser.parseAsync(queue: DispatchQueue.global()) { (result) in
-        let items = result.rssFeed?.items
-        guard let itemsArray = items else { return }
+        guard let itemsArray = try? result.get().rssFeed?.items else { return }
+        let cateriesSet = Set(itemsArray.map({ $0.categories?.first?.value }))
+        print(cateriesSet)
+  
         self.articlesArray = itemsArray
-        print("News count:", items?.count)
-        print("Error", result.error)
+        print("News count:", self.articlesArray.count)
 
+        self.categoryArray = (Array(cateriesSet) as? [String])!
+        print(self.categoryArray.count)
+        
+        
+        let filterVC = self.parent as? FilterViewController
+        filterVC!.categories = self.categoryArray
+        
         completionHandler?()
     }
     }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return articlesArray.count 
     }
 
@@ -81,46 +87,6 @@ class TableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
 
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-
-
-
-
 
 }
 

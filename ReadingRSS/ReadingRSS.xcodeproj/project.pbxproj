@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B45BE792349586E008AAFDA /* Strucs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B45BE782349586E008AAFDA /* Strucs.swift */; };
 		5B6DC24523477B7C0036DB17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6DC24423477B7C0036DB17 /* AppDelegate.swift */; };
 		5B6DC24A23477B7C0036DB17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B6DC24823477B7C0036DB17 /* Main.storyboard */; };
 		5B6DC24D23477B7C0036DB17 /* ReadingRSS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B6DC24B23477B7C0036DB17 /* ReadingRSS.xcdatamodeld */; };
@@ -16,12 +15,105 @@
 		5BEBAC9B234F30B0004F5B90 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAC9A234F30B0004F5B90 /* TableViewController.swift */; };
 		5BEBACA2234F4526004F5B90 /* OneNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACA1234F4526004F5B90 /* OneNewsViewController.swift */; };
 		5BEBACA8235257D4004F5B90 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACA7235257D4004F5B90 /* FilterViewController.swift */; };
+		5BEBAD1823536702004F5B90 /* DateSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACAE23536701004F5B90 /* DateSpec.swift */; };
+		5BEBAD1923536702004F5B90 /* RFC3339DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACAF23536701004F5B90 /* RFC3339DateFormatter.swift */; };
+		5BEBAD1A23536702004F5B90 /* RFC822DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACB023536701004F5B90 /* RFC822DateFormatter.swift */; };
+		5BEBAD1B23536702004F5B90 /* ISO8601DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACB123536701004F5B90 /* ISO8601DateFormatter.swift */; };
+		5BEBAD1C23536702004F5B90 /* AtomFeedGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACB423536701004F5B90 /* AtomFeedGenerator.swift */; };
+		5BEBAD1D23536702004F5B90 /* AtomFeedEntryContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACB523536701004F5B90 /* AtomFeedEntryContent.swift */; };
+		5BEBAD1E23536702004F5B90 /* AtomFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACB623536701004F5B90 /* AtomFeed.swift */; };
+		5BEBAD1F23536702004F5B90 /* AtomFeedEntryContributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACB723536701004F5B90 /* AtomFeedEntryContributor.swift */; };
+		5BEBAD2023536702004F5B90 /* AtomFeedEntryCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACB823536701004F5B90 /* AtomFeedEntryCategory.swift */; };
+		5BEBAD2123536702004F5B90 /* AtomFeedContributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACB923536701004F5B90 /* AtomFeedContributor.swift */; };
+		5BEBAD2223536702004F5B90 /* AtomFeedCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACBA23536701004F5B90 /* AtomFeedCategory.swift */; };
+		5BEBAD2323536702004F5B90 /* AtomFeedEntrySummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACBB23536701004F5B90 /* AtomFeedEntrySummary.swift */; };
+		5BEBAD2423536702004F5B90 /* AtomPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACBC23536701004F5B90 /* AtomPath.swift */; };
+		5BEBAD2523536702004F5B90 /* AtomFeedAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACBD23536701004F5B90 /* AtomFeedAuthor.swift */; };
+		5BEBAD2623536702004F5B90 /* AtomFeed + mapCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACBE23536701004F5B90 /* AtomFeed + mapCharacters.swift */; };
+		5BEBAD2723536702004F5B90 /* AtomFeedEntrySource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACBF23536701004F5B90 /* AtomFeedEntrySource.swift */; };
+		5BEBAD2823536702004F5B90 /* AtomFeedLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACC023536701004F5B90 /* AtomFeedLink.swift */; };
+		5BEBAD2923536702004F5B90 /* AtomFeedEntryAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACC123536701004F5B90 /* AtomFeedEntryAuthor.swift */; };
+		5BEBAD2A23536702004F5B90 /* AtomFeedEntryLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACC223536701004F5B90 /* AtomFeedEntryLink.swift */; };
+		5BEBAD2B23536702004F5B90 /* AtomFeed + mapAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACC323536701004F5B90 /* AtomFeed + mapAttributes.swift */; };
+		5BEBAD2C23536702004F5B90 /* AtomFeedSubtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACC423536701004F5B90 /* AtomFeedSubtitle.swift */; };
+		5BEBAD2D23536702004F5B90 /* AtomFeedEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACC523536701004F5B90 /* AtomFeedEntry.swift */; };
+		5BEBAD2E23536702004F5B90 /* RSSFeed + mapCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACC723536701004F5B90 /* RSSFeed + mapCharacters.swift */; };
+		5BEBAD2F23536702004F5B90 /* RSSFeedCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACC823536701004F5B90 /* RSSFeedCategory.swift */; };
+		5BEBAD3023536702004F5B90 /* RDFPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACC923536701004F5B90 /* RDFPath.swift */; };
+		5BEBAD3123536702004F5B90 /* RSSFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACCA23536701004F5B90 /* RSSFeedItem.swift */; };
+		5BEBAD3223536702004F5B90 /* RSSFeed + mapAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACCB23536701004F5B90 /* RSSFeed + mapAttributes.swift */; };
+		5BEBAD3323536702004F5B90 /* RSSFeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACCC23536701004F5B90 /* RSSFeedImage.swift */; };
+		5BEBAD3423536702004F5B90 /* RSSFeedSkipDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACCD23536701004F5B90 /* RSSFeedSkipDay.swift */; };
+		5BEBAD3523536702004F5B90 /* RSSFeedItemGUID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACCE23536701004F5B90 /* RSSFeedItemGUID.swift */; };
+		5BEBAD3623536702004F5B90 /* RSSFeedSkipHour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACCF23536701004F5B90 /* RSSFeedSkipHour.swift */; };
+		5BEBAD3723536702004F5B90 /* RSSFeedCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACD023536701004F5B90 /* RSSFeedCloud.swift */; };
+		5BEBAD3823536702004F5B90 /* RSSFeedItemCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACD123536701004F5B90 /* RSSFeedItemCategory.swift */; };
+		5BEBAD3923536702004F5B90 /* RSSPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACD223536701004F5B90 /* RSSPath.swift */; };
+		5BEBAD3A23536702004F5B90 /* RSSFeedTextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACD323536701004F5B90 /* RSSFeedTextInput.swift */; };
+		5BEBAD3B23536702004F5B90 /* RSSFeedItemEnclosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACD423536701004F5B90 /* RSSFeedItemEnclosure.swift */; };
+		5BEBAD3C23536702004F5B90 /* RSSFeedItemSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACD523536701004F5B90 /* RSSFeedItemSource.swift */; };
+		5BEBAD3D23536702004F5B90 /* RSSFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACD623536701004F5B90 /* RSSFeed.swift */; };
+		5BEBAD3E23536702004F5B90 /* SyndicationUpdatePeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACD923536701004F5B90 /* SyndicationUpdatePeriod.swift */; };
+		5BEBAD3F23536702004F5B90 /* SyndicationNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACDA23536701004F5B90 /* SyndicationNamespace.swift */; };
+		5BEBAD4023536702004F5B90 /* iTunesCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACDC23536701004F5B90 /* iTunesCategory.swift */; };
+		5BEBAD4123536702004F5B90 /* iTunesImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACDD23536701004F5B90 /* iTunesImage.swift */; };
+		5BEBAD4223536702004F5B90 /* iTunesNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACDE23536701004F5B90 /* iTunesNamespace.swift */; };
+		5BEBAD4323536702004F5B90 /* iTunesSubCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACDF23536701004F5B90 /* iTunesSubCategory.swift */; };
+		5BEBAD4423536702004F5B90 /* iTunesOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACE023536701004F5B90 /* iTunesOwner.swift */; };
+		5BEBAD4523536702004F5B90 /* ContentNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACE223536701004F5B90 /* ContentNamespace.swift */; };
+		5BEBAD4623536702004F5B90 /* DublinCoreNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACE423536701004F5B90 /* DublinCoreNamespace.swift */; };
+		5BEBAD4723536702004F5B90 /* MediaLicence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACE623536701004F5B90 /* MediaLicence.swift */; };
+		5BEBAD4823536702004F5B90 /* MediaCredit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACE723536701004F5B90 /* MediaCredit.swift */; };
+		5BEBAD4923536702004F5B90 /* MediaHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACE823536701004F5B90 /* MediaHash.swift */; };
+		5BEBAD4A23536702004F5B90 /* MediaTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACE923536701004F5B90 /* MediaTitle.swift */; };
+		5BEBAD4B23536702004F5B90 /* MediaNamespace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACEA23536701004F5B90 /* MediaNamespace.swift */; };
+		5BEBAD4C23536702004F5B90 /* MediaRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACEB23536701004F5B90 /* MediaRating.swift */; };
+		5BEBAD4D23536702004F5B90 /* MediaRights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACEC23536701004F5B90 /* MediaRights.swift */; };
+		5BEBAD4E23536702004F5B90 /* MediaContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACED23536701004F5B90 /* MediaContent.swift */; };
+		5BEBAD4F23536702004F5B90 /* MediaTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACEE23536701004F5B90 /* MediaTag.swift */; };
+		5BEBAD5023536702004F5B90 /* MediaSubTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACEF23536701004F5B90 /* MediaSubTitle.swift */; };
+		5BEBAD5123536702004F5B90 /* MediaLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACF023536701004F5B90 /* MediaLocation.swift */; };
+		5BEBAD5223536702004F5B90 /* MediaGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACF123536701004F5B90 /* MediaGroup.swift */; };
+		5BEBAD5323536702004F5B90 /* MediaCommunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACF223536701004F5B90 /* MediaCommunity.swift */; };
+		5BEBAD5423536702004F5B90 /* MediaPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACF323536701004F5B90 /* MediaPrice.swift */; };
+		5BEBAD5523536702004F5B90 /* MediaPeerLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACF423536701004F5B90 /* MediaPeerLink.swift */; };
+		5BEBAD5623536702004F5B90 /* MediaCopyright.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACF523536701004F5B90 /* MediaCopyright.swift */; };
+		5BEBAD5723536702004F5B90 /* MediaRestriction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACF623536701004F5B90 /* MediaRestriction.swift */; };
+		5BEBAD5823536702004F5B90 /* MediaDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACF723536701004F5B90 /* MediaDescription.swift */; };
+		5BEBAD5923536702004F5B90 /* MediaParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACF823536701004F5B90 /* MediaParam.swift */; };
+		5BEBAD5A23536702004F5B90 /* MediaScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACF923536701004F5B90 /* MediaScene.swift */; };
+		5BEBAD5B23536702004F5B90 /* MediaStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACFA23536701004F5B90 /* MediaStatistics.swift */; };
+		5BEBAD5C23536703004F5B90 /* MediaEmbed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACFB23536701004F5B90 /* MediaEmbed.swift */; };
+		5BEBAD5D23536703004F5B90 /* MediaText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACFC23536701004F5B90 /* MediaText.swift */; };
+		5BEBAD5E23536703004F5B90 /* MediaCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACFD23536701004F5B90 /* MediaCategory.swift */; };
+		5BEBAD5F23536703004F5B90 /* MediaStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACFE23536701004F5B90 /* MediaStatus.swift */; };
+		5BEBAD6023536703004F5B90 /* MediaStarRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBACFF23536701004F5B90 /* MediaStarRating.swift */; };
+		5BEBAD6123536703004F5B90 /* MediaThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAD0023536701004F5B90 /* MediaThumbnail.swift */; };
+		5BEBAD6223536703004F5B90 /* MediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAD0123536701004F5B90 /* MediaPlayer.swift */; };
+		5BEBAD6323536703004F5B90 /* JSONFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAD0323536701004F5B90 /* JSONFeed.swift */; };
+		5BEBAD6423536703004F5B90 /* JSONFeedAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAD0423536701004F5B90 /* JSONFeedAttachment.swift */; };
+		5BEBAD6523536703004F5B90 /* JSONFeedHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAD0523536701004F5B90 /* JSONFeedHub.swift */; };
+		5BEBAD6623536703004F5B90 /* JSONFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAD0623536701004F5B90 /* JSONFeedItem.swift */; };
+		5BEBAD6723536703004F5B90 /* JSONFeedAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAD0723536701004F5B90 /* JSONFeedAuthor.swift */; };
+		5BEBAD6823536703004F5B90 /* FeedDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAD0923536701004F5B90 /* FeedDataType.swift */; };
+		5BEBAD6923536703004F5B90 /* XMLFeedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAD0A23536701004F5B90 /* XMLFeedType.swift */; };
+		5BEBAD6A23536703004F5B90 /* ParserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAD0B23536701004F5B90 /* ParserError.swift */; };
+		5BEBAD6B23536703004F5B90 /* JSONFeedParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAD0C23536701004F5B90 /* JSONFeedParser.swift */; };
+		5BEBAD6C23536703004F5B90 /* FeedParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAD0D23536701004F5B90 /* FeedParser.swift */; };
+		5BEBAD6D23536703004F5B90 /* XMLFeedParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAD0E23536701004F5B90 /* XMLFeedParser.swift */; };
+		5BEBAD6E23536703004F5B90 /* FeedParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAD0F23536701004F5B90 /* FeedParserProtocol.swift */; };
+		5BEBAD6F23536703004F5B90 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAD1023536701004F5B90 /* Feed.swift */; };
+		5BEBAD7023536703004F5B90 /* URL + replacingScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAD1223536701004F5B90 /* URL + replacingScheme.swift */; };
+		5BEBAD7123536703004F5B90 /* String + toDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAD1323536701004F5B90 /* String + toDuration.swift */; };
+		5BEBAD7223536703004F5B90 /* Array + Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAD1423536701004F5B90 /* Array + Equatable.swift */; };
+		5BEBAD7323536703004F5B90 /* Date + codingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAD1523536701004F5B90 /* Date + codingStrategy.swift */; };
+		5BEBAD7423536703004F5B90 /* String + toDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAD1623536701004F5B90 /* String + toDate.swift */; };
+		5BEBAD7523536703004F5B90 /* String + toBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAD1723536701004F5B90 /* String + toBool.swift */; };
 		8E37D032A384D144976FACCA /* Pods_ReadingRSS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EDD91A04B7B892CDC97A46D /* Pods_ReadingRSS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		44D346F5C3610FED922D28AA /* Pods-ReadingRSS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReadingRSS.debug.xcconfig"; path = "Target Support Files/Pods-ReadingRSS/Pods-ReadingRSS.debug.xcconfig"; sourceTree = "<group>"; };
-		5B45BE782349586E008AAFDA /* Strucs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strucs.swift; sourceTree = "<group>"; };
 		5B6DC24123477B7C0036DB17 /* ReadingRSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadingRSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6DC24423477B7C0036DB17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B6DC24923477B7C0036DB17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -32,6 +124,100 @@
 		5BEBAC9A234F30B0004F5B90 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		5BEBACA1234F4526004F5B90 /* OneNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneNewsViewController.swift; sourceTree = "<group>"; };
 		5BEBACA7235257D4004F5B90 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		5BEBACAE23536701004F5B90 /* DateSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateSpec.swift; sourceTree = "<group>"; };
+		5BEBACAF23536701004F5B90 /* RFC3339DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFC3339DateFormatter.swift; sourceTree = "<group>"; };
+		5BEBACB023536701004F5B90 /* RFC822DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFC822DateFormatter.swift; sourceTree = "<group>"; };
+		5BEBACB123536701004F5B90 /* ISO8601DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISO8601DateFormatter.swift; sourceTree = "<group>"; };
+		5BEBACB423536701004F5B90 /* AtomFeedGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomFeedGenerator.swift; sourceTree = "<group>"; };
+		5BEBACB523536701004F5B90 /* AtomFeedEntryContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomFeedEntryContent.swift; sourceTree = "<group>"; };
+		5BEBACB623536701004F5B90 /* AtomFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomFeed.swift; sourceTree = "<group>"; };
+		5BEBACB723536701004F5B90 /* AtomFeedEntryContributor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomFeedEntryContributor.swift; sourceTree = "<group>"; };
+		5BEBACB823536701004F5B90 /* AtomFeedEntryCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomFeedEntryCategory.swift; sourceTree = "<group>"; };
+		5BEBACB923536701004F5B90 /* AtomFeedContributor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomFeedContributor.swift; sourceTree = "<group>"; };
+		5BEBACBA23536701004F5B90 /* AtomFeedCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomFeedCategory.swift; sourceTree = "<group>"; };
+		5BEBACBB23536701004F5B90 /* AtomFeedEntrySummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomFeedEntrySummary.swift; sourceTree = "<group>"; };
+		5BEBACBC23536701004F5B90 /* AtomPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomPath.swift; sourceTree = "<group>"; };
+		5BEBACBD23536701004F5B90 /* AtomFeedAuthor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomFeedAuthor.swift; sourceTree = "<group>"; };
+		5BEBACBE23536701004F5B90 /* AtomFeed + mapCharacters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AtomFeed + mapCharacters.swift"; sourceTree = "<group>"; };
+		5BEBACBF23536701004F5B90 /* AtomFeedEntrySource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomFeedEntrySource.swift; sourceTree = "<group>"; };
+		5BEBACC023536701004F5B90 /* AtomFeedLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomFeedLink.swift; sourceTree = "<group>"; };
+		5BEBACC123536701004F5B90 /* AtomFeedEntryAuthor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomFeedEntryAuthor.swift; sourceTree = "<group>"; };
+		5BEBACC223536701004F5B90 /* AtomFeedEntryLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomFeedEntryLink.swift; sourceTree = "<group>"; };
+		5BEBACC323536701004F5B90 /* AtomFeed + mapAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AtomFeed + mapAttributes.swift"; sourceTree = "<group>"; };
+		5BEBACC423536701004F5B90 /* AtomFeedSubtitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomFeedSubtitle.swift; sourceTree = "<group>"; };
+		5BEBACC523536701004F5B90 /* AtomFeedEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomFeedEntry.swift; sourceTree = "<group>"; };
+		5BEBACC723536701004F5B90 /* RSSFeed + mapCharacters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RSSFeed + mapCharacters.swift"; sourceTree = "<group>"; };
+		5BEBACC823536701004F5B90 /* RSSFeedCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFeedCategory.swift; sourceTree = "<group>"; };
+		5BEBACC923536701004F5B90 /* RDFPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDFPath.swift; sourceTree = "<group>"; };
+		5BEBACCA23536701004F5B90 /* RSSFeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFeedItem.swift; sourceTree = "<group>"; };
+		5BEBACCB23536701004F5B90 /* RSSFeed + mapAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RSSFeed + mapAttributes.swift"; sourceTree = "<group>"; };
+		5BEBACCC23536701004F5B90 /* RSSFeedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFeedImage.swift; sourceTree = "<group>"; };
+		5BEBACCD23536701004F5B90 /* RSSFeedSkipDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFeedSkipDay.swift; sourceTree = "<group>"; };
+		5BEBACCE23536701004F5B90 /* RSSFeedItemGUID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFeedItemGUID.swift; sourceTree = "<group>"; };
+		5BEBACCF23536701004F5B90 /* RSSFeedSkipHour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFeedSkipHour.swift; sourceTree = "<group>"; };
+		5BEBACD023536701004F5B90 /* RSSFeedCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFeedCloud.swift; sourceTree = "<group>"; };
+		5BEBACD123536701004F5B90 /* RSSFeedItemCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFeedItemCategory.swift; sourceTree = "<group>"; };
+		5BEBACD223536701004F5B90 /* RSSPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSPath.swift; sourceTree = "<group>"; };
+		5BEBACD323536701004F5B90 /* RSSFeedTextInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFeedTextInput.swift; sourceTree = "<group>"; };
+		5BEBACD423536701004F5B90 /* RSSFeedItemEnclosure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFeedItemEnclosure.swift; sourceTree = "<group>"; };
+		5BEBACD523536701004F5B90 /* RSSFeedItemSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFeedItemSource.swift; sourceTree = "<group>"; };
+		5BEBACD623536701004F5B90 /* RSSFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFeed.swift; sourceTree = "<group>"; };
+		5BEBACD923536701004F5B90 /* SyndicationUpdatePeriod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyndicationUpdatePeriod.swift; sourceTree = "<group>"; };
+		5BEBACDA23536701004F5B90 /* SyndicationNamespace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyndicationNamespace.swift; sourceTree = "<group>"; };
+		5BEBACDC23536701004F5B90 /* iTunesCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesCategory.swift; sourceTree = "<group>"; };
+		5BEBACDD23536701004F5B90 /* iTunesImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesImage.swift; sourceTree = "<group>"; };
+		5BEBACDE23536701004F5B90 /* iTunesNamespace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesNamespace.swift; sourceTree = "<group>"; };
+		5BEBACDF23536701004F5B90 /* iTunesSubCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesSubCategory.swift; sourceTree = "<group>"; };
+		5BEBACE023536701004F5B90 /* iTunesOwner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesOwner.swift; sourceTree = "<group>"; };
+		5BEBACE223536701004F5B90 /* ContentNamespace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentNamespace.swift; sourceTree = "<group>"; };
+		5BEBACE423536701004F5B90 /* DublinCoreNamespace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DublinCoreNamespace.swift; sourceTree = "<group>"; };
+		5BEBACE623536701004F5B90 /* MediaLicence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaLicence.swift; sourceTree = "<group>"; };
+		5BEBACE723536701004F5B90 /* MediaCredit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCredit.swift; sourceTree = "<group>"; };
+		5BEBACE823536701004F5B90 /* MediaHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaHash.swift; sourceTree = "<group>"; };
+		5BEBACE923536701004F5B90 /* MediaTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaTitle.swift; sourceTree = "<group>"; };
+		5BEBACEA23536701004F5B90 /* MediaNamespace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaNamespace.swift; sourceTree = "<group>"; };
+		5BEBACEB23536701004F5B90 /* MediaRating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaRating.swift; sourceTree = "<group>"; };
+		5BEBACEC23536701004F5B90 /* MediaRights.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaRights.swift; sourceTree = "<group>"; };
+		5BEBACED23536701004F5B90 /* MediaContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaContent.swift; sourceTree = "<group>"; };
+		5BEBACEE23536701004F5B90 /* MediaTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaTag.swift; sourceTree = "<group>"; };
+		5BEBACEF23536701004F5B90 /* MediaSubTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaSubTitle.swift; sourceTree = "<group>"; };
+		5BEBACF023536701004F5B90 /* MediaLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaLocation.swift; sourceTree = "<group>"; };
+		5BEBACF123536701004F5B90 /* MediaGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaGroup.swift; sourceTree = "<group>"; };
+		5BEBACF223536701004F5B90 /* MediaCommunity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCommunity.swift; sourceTree = "<group>"; };
+		5BEBACF323536701004F5B90 /* MediaPrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPrice.swift; sourceTree = "<group>"; };
+		5BEBACF423536701004F5B90 /* MediaPeerLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPeerLink.swift; sourceTree = "<group>"; };
+		5BEBACF523536701004F5B90 /* MediaCopyright.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCopyright.swift; sourceTree = "<group>"; };
+		5BEBACF623536701004F5B90 /* MediaRestriction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaRestriction.swift; sourceTree = "<group>"; };
+		5BEBACF723536701004F5B90 /* MediaDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaDescription.swift; sourceTree = "<group>"; };
+		5BEBACF823536701004F5B90 /* MediaParam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaParam.swift; sourceTree = "<group>"; };
+		5BEBACF923536701004F5B90 /* MediaScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaScene.swift; sourceTree = "<group>"; };
+		5BEBACFA23536701004F5B90 /* MediaStatistics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaStatistics.swift; sourceTree = "<group>"; };
+		5BEBACFB23536701004F5B90 /* MediaEmbed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaEmbed.swift; sourceTree = "<group>"; };
+		5BEBACFC23536701004F5B90 /* MediaText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaText.swift; sourceTree = "<group>"; };
+		5BEBACFD23536701004F5B90 /* MediaCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCategory.swift; sourceTree = "<group>"; };
+		5BEBACFE23536701004F5B90 /* MediaStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaStatus.swift; sourceTree = "<group>"; };
+		5BEBACFF23536701004F5B90 /* MediaStarRating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaStarRating.swift; sourceTree = "<group>"; };
+		5BEBAD0023536701004F5B90 /* MediaThumbnail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaThumbnail.swift; sourceTree = "<group>"; };
+		5BEBAD0123536701004F5B90 /* MediaPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPlayer.swift; sourceTree = "<group>"; };
+		5BEBAD0323536701004F5B90 /* JSONFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFeed.swift; sourceTree = "<group>"; };
+		5BEBAD0423536701004F5B90 /* JSONFeedAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFeedAttachment.swift; sourceTree = "<group>"; };
+		5BEBAD0523536701004F5B90 /* JSONFeedHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFeedHub.swift; sourceTree = "<group>"; };
+		5BEBAD0623536701004F5B90 /* JSONFeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFeedItem.swift; sourceTree = "<group>"; };
+		5BEBAD0723536701004F5B90 /* JSONFeedAuthor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFeedAuthor.swift; sourceTree = "<group>"; };
+		5BEBAD0923536701004F5B90 /* FeedDataType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedDataType.swift; sourceTree = "<group>"; };
+		5BEBAD0A23536701004F5B90 /* XMLFeedType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLFeedType.swift; sourceTree = "<group>"; };
+		5BEBAD0B23536701004F5B90 /* ParserError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserError.swift; sourceTree = "<group>"; };
+		5BEBAD0C23536701004F5B90 /* JSONFeedParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFeedParser.swift; sourceTree = "<group>"; };
+		5BEBAD0D23536701004F5B90 /* FeedParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedParser.swift; sourceTree = "<group>"; };
+		5BEBAD0E23536701004F5B90 /* XMLFeedParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLFeedParser.swift; sourceTree = "<group>"; };
+		5BEBAD0F23536701004F5B90 /* FeedParserProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedParserProtocol.swift; sourceTree = "<group>"; };
+		5BEBAD1023536701004F5B90 /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		5BEBAD1223536701004F5B90 /* URL + replacingScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL + replacingScheme.swift"; sourceTree = "<group>"; };
+		5BEBAD1323536701004F5B90 /* String + toDuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String + toDuration.swift"; sourceTree = "<group>"; };
+		5BEBAD1423536701004F5B90 /* Array + Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array + Equatable.swift"; sourceTree = "<group>"; };
+		5BEBAD1523536701004F5B90 /* Date + codingStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date + codingStrategy.swift"; sourceTree = "<group>"; };
+		5BEBAD1623536701004F5B90 /* String + toDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String + toDate.swift"; sourceTree = "<group>"; };
+		5BEBAD1723536701004F5B90 /* String + toBool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String + toBool.swift"; sourceTree = "<group>"; };
 		5EDD91A04B7B892CDC97A46D /* Pods_ReadingRSS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReadingRSS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A52A2DECA7443D25BD5240F6 /* Pods-ReadingRSS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReadingRSS.release.xcconfig"; path = "Target Support Files/Pods-ReadingRSS/Pods-ReadingRSS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,7 +264,7 @@
 		5B6DC24323477B7C0036DB17 /* ReadingRSS */ = {
 			isa = PBXGroup;
 			children = (
-				5BEBAC9E234F331A004F5B90 /* Models */,
+				5BEBACAB235366D7004F5B90 /* Parser */,
 				5B6DC24423477B7C0036DB17 /* AppDelegate.swift */,
 				5BEBACA1234F4526004F5B90 /* OneNewsViewController.swift */,
 				5BEBACA7235257D4004F5B90 /* FilterViewController.swift */,
@@ -92,12 +278,217 @@
 			path = ReadingRSS;
 			sourceTree = "<group>";
 		};
-		5BEBAC9E234F331A004F5B90 /* Models */ = {
+		5BEBACAB235366D7004F5B90 /* Parser */ = {
 			isa = PBXGroup;
 			children = (
-				5B45BE782349586E008AAFDA /* Strucs.swift */,
+				5BEBACAC23536701004F5B90 /* FeedKit */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		5BEBACAC23536701004F5B90 /* FeedKit */ = {
+			isa = PBXGroup;
+			children = (
+				5BEBACAD23536701004F5B90 /* Dates */,
+				5BEBACB223536701004F5B90 /* Models */,
+				5BEBAD0823536701004F5B90 /* Parser */,
+				5BEBAD1123536701004F5B90 /* Extensions */,
+			);
+			path = FeedKit;
+			sourceTree = "<group>";
+		};
+		5BEBACAD23536701004F5B90 /* Dates */ = {
+			isa = PBXGroup;
+			children = (
+				5BEBACAE23536701004F5B90 /* DateSpec.swift */,
+				5BEBACAF23536701004F5B90 /* RFC3339DateFormatter.swift */,
+				5BEBACB023536701004F5B90 /* RFC822DateFormatter.swift */,
+				5BEBACB123536701004F5B90 /* ISO8601DateFormatter.swift */,
+			);
+			path = Dates;
+			sourceTree = "<group>";
+		};
+		5BEBACB223536701004F5B90 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5BEBACB323536701004F5B90 /* Atom */,
+				5BEBACC623536701004F5B90 /* RSS */,
+				5BEBACD723536701004F5B90 /* Namespaces */,
+				5BEBAD0223536701004F5B90 /* JSON */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5BEBACB323536701004F5B90 /* Atom */ = {
+			isa = PBXGroup;
+			children = (
+				5BEBACB423536701004F5B90 /* AtomFeedGenerator.swift */,
+				5BEBACB523536701004F5B90 /* AtomFeedEntryContent.swift */,
+				5BEBACB623536701004F5B90 /* AtomFeed.swift */,
+				5BEBACB723536701004F5B90 /* AtomFeedEntryContributor.swift */,
+				5BEBACB823536701004F5B90 /* AtomFeedEntryCategory.swift */,
+				5BEBACB923536701004F5B90 /* AtomFeedContributor.swift */,
+				5BEBACBA23536701004F5B90 /* AtomFeedCategory.swift */,
+				5BEBACBB23536701004F5B90 /* AtomFeedEntrySummary.swift */,
+				5BEBACBC23536701004F5B90 /* AtomPath.swift */,
+				5BEBACBD23536701004F5B90 /* AtomFeedAuthor.swift */,
+				5BEBACBE23536701004F5B90 /* AtomFeed + mapCharacters.swift */,
+				5BEBACBF23536701004F5B90 /* AtomFeedEntrySource.swift */,
+				5BEBACC023536701004F5B90 /* AtomFeedLink.swift */,
+				5BEBACC123536701004F5B90 /* AtomFeedEntryAuthor.swift */,
+				5BEBACC223536701004F5B90 /* AtomFeedEntryLink.swift */,
+				5BEBACC323536701004F5B90 /* AtomFeed + mapAttributes.swift */,
+				5BEBACC423536701004F5B90 /* AtomFeedSubtitle.swift */,
+				5BEBACC523536701004F5B90 /* AtomFeedEntry.swift */,
+			);
+			path = Atom;
+			sourceTree = "<group>";
+		};
+		5BEBACC623536701004F5B90 /* RSS */ = {
+			isa = PBXGroup;
+			children = (
+				5BEBACC723536701004F5B90 /* RSSFeed + mapCharacters.swift */,
+				5BEBACC823536701004F5B90 /* RSSFeedCategory.swift */,
+				5BEBACC923536701004F5B90 /* RDFPath.swift */,
+				5BEBACCA23536701004F5B90 /* RSSFeedItem.swift */,
+				5BEBACCB23536701004F5B90 /* RSSFeed + mapAttributes.swift */,
+				5BEBACCC23536701004F5B90 /* RSSFeedImage.swift */,
+				5BEBACCD23536701004F5B90 /* RSSFeedSkipDay.swift */,
+				5BEBACCE23536701004F5B90 /* RSSFeedItemGUID.swift */,
+				5BEBACCF23536701004F5B90 /* RSSFeedSkipHour.swift */,
+				5BEBACD023536701004F5B90 /* RSSFeedCloud.swift */,
+				5BEBACD123536701004F5B90 /* RSSFeedItemCategory.swift */,
+				5BEBACD223536701004F5B90 /* RSSPath.swift */,
+				5BEBACD323536701004F5B90 /* RSSFeedTextInput.swift */,
+				5BEBACD423536701004F5B90 /* RSSFeedItemEnclosure.swift */,
+				5BEBACD523536701004F5B90 /* RSSFeedItemSource.swift */,
+				5BEBACD623536701004F5B90 /* RSSFeed.swift */,
+			);
+			path = RSS;
+			sourceTree = "<group>";
+		};
+		5BEBACD723536701004F5B90 /* Namespaces */ = {
+			isa = PBXGroup;
+			children = (
+				5BEBACD823536701004F5B90 /* Syndication */,
+				5BEBACDB23536701004F5B90 /* iTunes */,
+				5BEBACE123536701004F5B90 /* Content */,
+				5BEBACE323536701004F5B90 /* Dublin Core */,
+				5BEBACE523536701004F5B90 /* Media */,
+			);
+			path = Namespaces;
+			sourceTree = "<group>";
+		};
+		5BEBACD823536701004F5B90 /* Syndication */ = {
+			isa = PBXGroup;
+			children = (
+				5BEBACD923536701004F5B90 /* SyndicationUpdatePeriod.swift */,
+				5BEBACDA23536701004F5B90 /* SyndicationNamespace.swift */,
+			);
+			path = Syndication;
+			sourceTree = "<group>";
+		};
+		5BEBACDB23536701004F5B90 /* iTunes */ = {
+			isa = PBXGroup;
+			children = (
+				5BEBACDC23536701004F5B90 /* iTunesCategory.swift */,
+				5BEBACDD23536701004F5B90 /* iTunesImage.swift */,
+				5BEBACDE23536701004F5B90 /* iTunesNamespace.swift */,
+				5BEBACDF23536701004F5B90 /* iTunesSubCategory.swift */,
+				5BEBACE023536701004F5B90 /* iTunesOwner.swift */,
+			);
+			path = iTunes;
+			sourceTree = "<group>";
+		};
+		5BEBACE123536701004F5B90 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				5BEBACE223536701004F5B90 /* ContentNamespace.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		5BEBACE323536701004F5B90 /* Dublin Core */ = {
+			isa = PBXGroup;
+			children = (
+				5BEBACE423536701004F5B90 /* DublinCoreNamespace.swift */,
+			);
+			path = "Dublin Core";
+			sourceTree = "<group>";
+		};
+		5BEBACE523536701004F5B90 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				5BEBACE623536701004F5B90 /* MediaLicence.swift */,
+				5BEBACE723536701004F5B90 /* MediaCredit.swift */,
+				5BEBACE823536701004F5B90 /* MediaHash.swift */,
+				5BEBACE923536701004F5B90 /* MediaTitle.swift */,
+				5BEBACEA23536701004F5B90 /* MediaNamespace.swift */,
+				5BEBACEB23536701004F5B90 /* MediaRating.swift */,
+				5BEBACEC23536701004F5B90 /* MediaRights.swift */,
+				5BEBACED23536701004F5B90 /* MediaContent.swift */,
+				5BEBACEE23536701004F5B90 /* MediaTag.swift */,
+				5BEBACEF23536701004F5B90 /* MediaSubTitle.swift */,
+				5BEBACF023536701004F5B90 /* MediaLocation.swift */,
+				5BEBACF123536701004F5B90 /* MediaGroup.swift */,
+				5BEBACF223536701004F5B90 /* MediaCommunity.swift */,
+				5BEBACF323536701004F5B90 /* MediaPrice.swift */,
+				5BEBACF423536701004F5B90 /* MediaPeerLink.swift */,
+				5BEBACF523536701004F5B90 /* MediaCopyright.swift */,
+				5BEBACF623536701004F5B90 /* MediaRestriction.swift */,
+				5BEBACF723536701004F5B90 /* MediaDescription.swift */,
+				5BEBACF823536701004F5B90 /* MediaParam.swift */,
+				5BEBACF923536701004F5B90 /* MediaScene.swift */,
+				5BEBACFA23536701004F5B90 /* MediaStatistics.swift */,
+				5BEBACFB23536701004F5B90 /* MediaEmbed.swift */,
+				5BEBACFC23536701004F5B90 /* MediaText.swift */,
+				5BEBACFD23536701004F5B90 /* MediaCategory.swift */,
+				5BEBACFE23536701004F5B90 /* MediaStatus.swift */,
+				5BEBACFF23536701004F5B90 /* MediaStarRating.swift */,
+				5BEBAD0023536701004F5B90 /* MediaThumbnail.swift */,
+				5BEBAD0123536701004F5B90 /* MediaPlayer.swift */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		5BEBAD0223536701004F5B90 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				5BEBAD0323536701004F5B90 /* JSONFeed.swift */,
+				5BEBAD0423536701004F5B90 /* JSONFeedAttachment.swift */,
+				5BEBAD0523536701004F5B90 /* JSONFeedHub.swift */,
+				5BEBAD0623536701004F5B90 /* JSONFeedItem.swift */,
+				5BEBAD0723536701004F5B90 /* JSONFeedAuthor.swift */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		5BEBAD0823536701004F5B90 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				5BEBAD0923536701004F5B90 /* FeedDataType.swift */,
+				5BEBAD0A23536701004F5B90 /* XMLFeedType.swift */,
+				5BEBAD0B23536701004F5B90 /* ParserError.swift */,
+				5BEBAD0C23536701004F5B90 /* JSONFeedParser.swift */,
+				5BEBAD0D23536701004F5B90 /* FeedParser.swift */,
+				5BEBAD0E23536701004F5B90 /* XMLFeedParser.swift */,
+				5BEBAD0F23536701004F5B90 /* FeedParserProtocol.swift */,
+				5BEBAD1023536701004F5B90 /* Feed.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		5BEBAD1123536701004F5B90 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5BEBAD1223536701004F5B90 /* URL + replacingScheme.swift */,
+				5BEBAD1323536701004F5B90 /* String + toDuration.swift */,
+				5BEBAD1423536701004F5B90 /* Array + Equatable.swift */,
+				5BEBAD1523536701004F5B90 /* Date + codingStrategy.swift */,
+				5BEBAD1623536701004F5B90 /* String + toDate.swift */,
+				5BEBAD1723536701004F5B90 /* String + toBool.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C9C9EC063646E7BD0C4A870E /* Frameworks */ = {
@@ -119,7 +510,6 @@
 				5B6DC23D23477B7C0036DB17 /* Sources */,
 				5B6DC23E23477B7C0036DB17 /* Frameworks */,
 				5B6DC23F23477B7C0036DB17 /* Resources */,
-				35A5E2B63D25B0B8973C2912 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -199,23 +589,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		35A5E2B63D25B0B8973C2912 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ReadingRSS/Pods-ReadingRSS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ReadingRSS/Pods-ReadingRSS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReadingRSS/Pods-ReadingRSS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -223,12 +596,105 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BEBAD6123536703004F5B90 /* MediaThumbnail.swift in Sources */,
 				5BEBACA8235257D4004F5B90 /* FilterViewController.swift in Sources */,
+				5BEBAD5923536702004F5B90 /* MediaParam.swift in Sources */,
+				5BEBAD1B23536702004F5B90 /* ISO8601DateFormatter.swift in Sources */,
+				5BEBAD5423536702004F5B90 /* MediaPrice.swift in Sources */,
+				5BEBAD2C23536702004F5B90 /* AtomFeedSubtitle.swift in Sources */,
+				5BEBAD3E23536702004F5B90 /* SyndicationUpdatePeriod.swift in Sources */,
+				5BEBAD4523536702004F5B90 /* ContentNamespace.swift in Sources */,
+				5BEBAD3D23536702004F5B90 /* RSSFeed.swift in Sources */,
+				5BEBAD6223536703004F5B90 /* MediaPlayer.swift in Sources */,
+				5BEBAD4723536702004F5B90 /* MediaLicence.swift in Sources */,
+				5BEBAD4223536702004F5B90 /* iTunesNamespace.swift in Sources */,
+				5BEBAD7323536703004F5B90 /* Date + codingStrategy.swift in Sources */,
+				5BEBAD3523536702004F5B90 /* RSSFeedItemGUID.swift in Sources */,
+				5BEBAD6023536703004F5B90 /* MediaStarRating.swift in Sources */,
+				5BEBAD1F23536702004F5B90 /* AtomFeedEntryContributor.swift in Sources */,
+				5BEBAD5723536702004F5B90 /* MediaRestriction.swift in Sources */,
+				5BEBAD6F23536703004F5B90 /* Feed.swift in Sources */,
+				5BEBAD5D23536703004F5B90 /* MediaText.swift in Sources */,
+				5BEBAD3623536702004F5B90 /* RSSFeedSkipHour.swift in Sources */,
+				5BEBAD6D23536703004F5B90 /* XMLFeedParser.swift in Sources */,
+				5BEBAD4123536702004F5B90 /* iTunesImage.swift in Sources */,
+				5BEBAD6A23536703004F5B90 /* ParserError.swift in Sources */,
+				5BEBAD3423536702004F5B90 /* RSSFeedSkipDay.swift in Sources */,
+				5BEBAD4B23536702004F5B90 /* MediaNamespace.swift in Sources */,
+				5BEBAD3123536702004F5B90 /* RSSFeedItem.swift in Sources */,
+				5BEBAD7523536703004F5B90 /* String + toBool.swift in Sources */,
 				5BEBAC9B234F30B0004F5B90 /* TableViewController.swift in Sources */,
-				5B45BE792349586E008AAFDA /* Strucs.swift in Sources */,
+				5BEBAD2223536702004F5B90 /* AtomFeedCategory.swift in Sources */,
+				5BEBAD6323536703004F5B90 /* JSONFeed.swift in Sources */,
+				5BEBAD2423536702004F5B90 /* AtomPath.swift in Sources */,
 				5B6DC24D23477B7C0036DB17 /* ReadingRSS.xcdatamodeld in Sources */,
+				5BEBAD5323536702004F5B90 /* MediaCommunity.swift in Sources */,
+				5BEBAD5B23536702004F5B90 /* MediaStatistics.swift in Sources */,
+				5BEBAD3923536702004F5B90 /* RSSPath.swift in Sources */,
+				5BEBAD6523536703004F5B90 /* JSONFeedHub.swift in Sources */,
+				5BEBAD6B23536703004F5B90 /* JSONFeedParser.swift in Sources */,
+				5BEBAD4E23536702004F5B90 /* MediaContent.swift in Sources */,
 				5B6DC24523477B7C0036DB17 /* AppDelegate.swift in Sources */,
+				5BEBAD5623536702004F5B90 /* MediaCopyright.swift in Sources */,
+				5BEBAD5C23536703004F5B90 /* MediaEmbed.swift in Sources */,
+				5BEBAD6423536703004F5B90 /* JSONFeedAttachment.swift in Sources */,
+				5BEBAD1823536702004F5B90 /* DateSpec.swift in Sources */,
+				5BEBAD1E23536702004F5B90 /* AtomFeed.swift in Sources */,
+				5BEBAD7423536703004F5B90 /* String + toDate.swift in Sources */,
+				5BEBAD6623536703004F5B90 /* JSONFeedItem.swift in Sources */,
+				5BEBAD5223536702004F5B90 /* MediaGroup.swift in Sources */,
+				5BEBAD7023536703004F5B90 /* URL + replacingScheme.swift in Sources */,
+				5BEBAD5023536702004F5B90 /* MediaSubTitle.swift in Sources */,
+				5BEBAD2B23536702004F5B90 /* AtomFeed + mapAttributes.swift in Sources */,
+				5BEBAD2523536702004F5B90 /* AtomFeedAuthor.swift in Sources */,
+				5BEBAD2E23536702004F5B90 /* RSSFeed + mapCharacters.swift in Sources */,
+				5BEBAD2323536702004F5B90 /* AtomFeedEntrySummary.swift in Sources */,
+				5BEBAD4923536702004F5B90 /* MediaHash.swift in Sources */,
+				5BEBAD3C23536702004F5B90 /* RSSFeedItemSource.swift in Sources */,
+				5BEBAD3723536702004F5B90 /* RSSFeedCloud.swift in Sources */,
+				5BEBAD5823536702004F5B90 /* MediaDescription.swift in Sources */,
+				5BEBAD4F23536702004F5B90 /* MediaTag.swift in Sources */,
+				5BEBAD5123536702004F5B90 /* MediaLocation.swift in Sources */,
+				5BEBAD4A23536702004F5B90 /* MediaTitle.swift in Sources */,
+				5BEBAD4C23536702004F5B90 /* MediaRating.swift in Sources */,
+				5BEBAD1A23536702004F5B90 /* RFC822DateFormatter.swift in Sources */,
+				5BEBAD3823536702004F5B90 /* RSSFeedItemCategory.swift in Sources */,
+				5BEBAD5E23536703004F5B90 /* MediaCategory.swift in Sources */,
+				5BEBAD1923536702004F5B90 /* RFC3339DateFormatter.swift in Sources */,
+				5BEBAD6923536703004F5B90 /* XMLFeedType.swift in Sources */,
+				5BEBAD1C23536702004F5B90 /* AtomFeedGenerator.swift in Sources */,
+				5BEBAD3323536702004F5B90 /* RSSFeedImage.swift in Sources */,
+				5BEBAD6823536703004F5B90 /* FeedDataType.swift in Sources */,
+				5BEBAD2123536702004F5B90 /* AtomFeedContributor.swift in Sources */,
+				5BEBAD3223536702004F5B90 /* RSSFeed + mapAttributes.swift in Sources */,
+				5BEBAD2823536702004F5B90 /* AtomFeedLink.swift in Sources */,
+				5BEBAD2923536702004F5B90 /* AtomFeedEntryAuthor.swift in Sources */,
+				5BEBAD5523536702004F5B90 /* MediaPeerLink.swift in Sources */,
+				5BEBAD4423536702004F5B90 /* iTunesOwner.swift in Sources */,
 				5BEBACA2234F4526004F5B90 /* OneNewsViewController.swift in Sources */,
+				5BEBAD2723536702004F5B90 /* AtomFeedEntrySource.swift in Sources */,
+				5BEBAD7123536703004F5B90 /* String + toDuration.swift in Sources */,
+				5BEBAD6723536703004F5B90 /* JSONFeedAuthor.swift in Sources */,
+				5BEBAD4323536702004F5B90 /* iTunesSubCategory.swift in Sources */,
+				5BEBAD4623536702004F5B90 /* DublinCoreNamespace.swift in Sources */,
+				5BEBAD1D23536702004F5B90 /* AtomFeedEntryContent.swift in Sources */,
+				5BEBAD3F23536702004F5B90 /* SyndicationNamespace.swift in Sources */,
+				5BEBAD7223536703004F5B90 /* Array + Equatable.swift in Sources */,
+				5BEBAD4023536702004F5B90 /* iTunesCategory.swift in Sources */,
+				5BEBAD2F23536702004F5B90 /* RSSFeedCategory.swift in Sources */,
+				5BEBAD3A23536702004F5B90 /* RSSFeedTextInput.swift in Sources */,
+				5BEBAD4823536702004F5B90 /* MediaCredit.swift in Sources */,
+				5BEBAD3023536702004F5B90 /* RDFPath.swift in Sources */,
+				5BEBAD5A23536702004F5B90 /* MediaScene.swift in Sources */,
+				5BEBAD2023536702004F5B90 /* AtomFeedEntryCategory.swift in Sources */,
+				5BEBAD2623536702004F5B90 /* AtomFeed + mapCharacters.swift in Sources */,
+				5BEBAD6C23536703004F5B90 /* FeedParser.swift in Sources */,
+				5BEBAD6E23536703004F5B90 /* FeedParserProtocol.swift in Sources */,
+				5BEBAD2A23536702004F5B90 /* AtomFeedEntryLink.swift in Sources */,
+				5BEBAD5F23536703004F5B90 /* MediaStatus.swift in Sources */,
+				5BEBAD2D23536702004F5B90 /* AtomFeedEntry.swift in Sources */,
+				5BEBAD3B23536702004F5B90 /* RSSFeedItemEnclosure.swift in Sources */,
+				5BEBAD4D23536702004F5B90 /* MediaRights.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

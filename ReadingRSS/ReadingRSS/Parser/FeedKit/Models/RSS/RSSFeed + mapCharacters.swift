@@ -73,7 +73,13 @@ extension RSSFeed {
         case .rssChannelItemCategory:                               self.items?.last?.categories?.last?.value                       = self.items?.last?.categories?.last?.value?.appending(string) ?? string
         case .rssChannelItemComments:                               self.items?.last?.comments                                      = self.items?.last?.comments?.appending(string) ?? string
         case .rssChannelItemGUID:                                   self.items?.last?.guid?.value                                   = self.items?.last?.guid?.value?.appending(string) ?? string
-        case .rssChannelItemPubDate:                                self.items?.last?.pubDate                                       = string.toPermissiveDate()
+        case .rssChannelItemYandexFullText:                                   self.items?.last?.yandexFullText
+            = self.items?.last?.yandexFullText?.appending(string) ?? string
+        case .rssChannelItemPubDate:
+            let string = string.trimmingCharacters(in: .whitespacesAndNewlines)
+            if !string.isEmpty {
+                self.items?.last?.pubDate = string.toPermissiveDate()
+            }
         case .rssChannelItemSource:                                 self.items?.last?.source?.value                                 = self.items?.last?.source?.value?.appending(string) ?? string
         case .rssChannelItemContentEncoded:                         self.items?.last?.content?.contentEncoded                       = self.items?.last?.content?.contentEncoded?.appending(string) ?? string
         case .rssChannelSyndicationUpdatePeriod:                    self.syndication?.syUpdatePeriod                                = SyndicationUpdatePeriod(rawValue: string)
@@ -136,6 +142,17 @@ extension RSSFeed {
         case .rssChannelItemMediaLicense:                           self.items?.last?.media?.mediaLicense?.value                    = self.items?.last?.media?.mediaLicense?.value?.appending(string) ?? string
         case .rssChannelItemMediaRestriction:                       self.items?.last?.media?.mediaRestriction?.value                = self.items?.last?.media?.mediaRestriction?.value?.appending(string) ?? string
         case .rssChannelItemMediaContentTitle:                      self.items?.last?.media?.mediaContents?.last?.mediaTitle?.value             = self.items?.last?.media?.mediaContents?.last?.mediaTitle?.value?.appending(string) ?? string
+        case .rssChannelItemMediaContentKeywords:
+            if !string.isEmpty {
+                let keywords = string
+                    .components(separatedBy: ",")
+                    .map { (string) -> String in
+                        return string.trimmingCharacters(in: .whitespacesAndNewlines)
+                    }
+                self.items?.last?.media?.mediaContents?.last?.mediaKeywords?.append(contentsOf: keywords)
+            }
+            
+        case .rssChannelItemMediaContentCategory:                   self.items?.last?.media?.mediaContents?.last?.mediaCategory?.value          = self.items?.last?.media?.mediaContents?.last?.mediaCategory?.value?.appending(string) ?? string
         case .rssChannelItemMediaContentDescription:                self.items?.last?.media?.mediaContents?.last?.mediaDescription?.value       = self.items?.last?.media?.mediaDescription?.value?.appending(string) ?? string
         case .rssChannelItemMediaContentPlayer:                     self.items?.last?.media?.mediaContents?.last?.mediaPlayer?.value            = self.items?.last?.media?.mediaContents?.last?.mediaPlayer?.value?.appending(string) ?? string
         case .rssChannelItemMediaContentThumbnail:                  self.items?.last?.media?.mediaContents?.last?.mediaThumbnails?.last?.value  = self.items?.last?.media?.mediaContents?.last?.mediaThumbnails?.last?.value?.appending(string) ?? string

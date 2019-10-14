@@ -34,6 +34,8 @@ import Foundation
 /// however at least one of title or description must be present.
 public class RSSFeedItem {
     
+    public var yandexFullText: String?
+    
     /// The title of the item.
     /// 
     /// Example: Venice Film Festival Tries to Quit Sinking
