@@ -1,6 +1,5 @@
 import UIKit
 
-
 class OneNewsViewController: UIViewController {
 
     var article: RSSFeedItem?

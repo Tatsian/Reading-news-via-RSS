@@ -5,13 +5,11 @@ class FilterViewController: UIViewController {
     var toolBar = UIToolbar()
     var picker  = UIPickerView()
     var categories: [String] = []
+    
+    weak var tableViewController: TableViewController?
+    var selectedCategory: String?
 
     @IBOutlet weak var chooseFilterButton: UIButton!
-   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
     
     @IBAction func chooseFilterClikced(_ sender: Any) {
         picker = UIPickerView.init()
@@ -32,6 +30,7 @@ class FilterViewController: UIViewController {
     @objc func doneButtonTapped() {
         toolBar.removeFromSuperview()
         picker.removeFromSuperview()
+        tableViewController?.selectedCategory = selectedCategory
     }
 
 }
@@ -52,14 +51,15 @@ extension FilterViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-    chooseFilterButton.setTitle(categories[row], for: .normal)
+        let selectedCategory = categories[row]
+        chooseFilterButton.setTitle(selectedCategory, for: .normal)
+        self.selectedCategory = selectedCategory
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "goToTableView" else { return }
-        
-      
-        
-  
+               
+        tableViewController = segue.destination as? TableViewController
+
     }
 }
